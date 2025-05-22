@@ -1,11 +1,27 @@
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 0;
-  width: 100vw;
-  text-align: center;
-  padding: 20px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
   background-color: $bg-footer;
-  margin-top: 40px;
+  text-align: center;
   font-size: 0.9rem;
+  color: $text-color;
+  margin-top: auto;
+  
+  h3 {
+    color: $primary-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    text-align: center;
+    
+    .text-md-end {
+      text-align: center !important;
+      margin-top: 15px;
+    }
+  }
 }

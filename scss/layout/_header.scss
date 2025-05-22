@@ -1,6 +1,18 @@
 header {
   background-color: $primary-color;
-  padding: 20px 0;
+  background-image: $header-gradient;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-md;
+  transition: $transition-standard;
+  animation: headerFadeIn 0.5s ease-in-out;
+  
+  &.scrolled {
+    padding: 10px 0;
+    box-shadow: $shadow-lg;
+  }
 }
 
 .navbar {
@@ -14,4 +26,88 @@ header {
   font-size: $font-size-xxl;
   font-weight: bold;
   color: white;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/images/pngegg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    animation: moneySymbolAnimation 3s infinite ease-in-out;
+  }
+}
+
+// Media queries para responsividad
+@include media-breakpoint-down(md) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+  
+  .logo {
+    font-size: $font-size-xl;
+  }
+}
+
+// Para dispositivos muy pequeños
+@include media-breakpoint-down(sm) {
+  header {
+    padding: 10px 0;
+  }
+  
+  .logo {
+    font-size: $font-size-lg;
+    
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+// Animación de entrada para el header
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Animación para el símbolo de dinero
+@keyframes moneySymbolAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 0 rgba(255, 215, 0, 0.3));
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
+  }
+  50% {
+    transform: scale(1.1) rotate(0deg);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+  }
+  75% {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 0 rgba(255, 215, 0, 0.3));
+  }
 }

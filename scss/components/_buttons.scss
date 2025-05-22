@@ -7,13 +7,14 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  text-align: center;
   
   &-primary {
-    background-color: $accent-color;
+    background-color: $primary-color;
     color: white;
     
     &:hover {
-      background-color: darken($accent-color, 10%);
+      background-color: darken($primary-color, 10%);
       transform: translateY(-2px);
       box-shadow: $shadow-sm;
     }
@@ -30,11 +31,23 @@
       box-shadow: $shadow-sm;
     }
   }
+  
+  &-accent {
+    background-color: $accent-color;
+    color: white;
+    
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-sm;
+    }
+  }
 }
 
 .hero-buttons {
   display: flex;
   gap: 15px;
+  margin-top: 1.5rem;
   
   .btn {
     display: flex;
@@ -46,7 +59,7 @@
     }
   }
   
-  @media (max-width: $breakpoint-sm) {
+  @include media-breakpoint-down(sm) {
     flex-direction: column;
     width: 100%;
     

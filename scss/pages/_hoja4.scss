@@ -1,0 +1,670 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+// Estilos para la sección de tasas ISR
+.tax-rates-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 3rem 0;
+  
+  .table-responsive {
+    margin-top: 1.5rem;
+  }
+  
+  .table {
+    --bs-table-hover-bg: rgba(114, 137, 218, 0.05);
+    --bs-table-hover-color: #333;
+    
+    thead {
+      th {
+        font-weight: 600;
+        background-color: rgba(33, 97, 140, 0.1);
+        color: #21618c;
+      }
+    }
+    
+    td, th {
+      padding: 1rem 0.75rem;
+      vertical-align: middle;
+    }
+  }
+  
+  .alert {
+    display: flex;
+    align-items: center;
+    
+    i {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+  
+  .key-benefits {
+    h4 {
+      color: #21618c;
+      margin-bottom: 1rem;
+    }
+    
+    .list-group-item {
+      padding: 1rem;
+      border-color: #e8ecef;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: rgba(114, 137, 218, 0.05);
+        transform: translateX(5px);
+      }
+      
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// Estilo para mejorar la presentación de las tarjetas de beneficios
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  
+  .grid-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: #21618c;
+    }
+  }
+}
+
+// Proceso de inscripción
+.process-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  background-image: linear-gradient(120deg, rgba(#f8f9fa, 0.9) 0%, rgba(white, 0.9) 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(#7289da, 0.05);
+    z-index: 0;
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(#21618c, 0.05);
+    z-index: 0;
+  }
+}
+
+.process-steps {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  
+  .step {
+    display: flex;
+    margin-bottom: 2.5rem;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &:not(:last-child):before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 25px;
+      height: calc(25% + 1.5rem);
+      width: 2px;
+      background-color: lighten(#21618c, 30%);
+      z-index: 0;
+    }
+    
+    .step-content {
+      flex-grow: 1;
+      
+      h4 {
+        color: #21618c;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        
+        i {
+          margin-left: 0.5rem;
+          transition: transform 0.3s ease;
+          
+          &.bi-chevron-up {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      
+      p {
+        margin-bottom: 1rem;
+        color: #333;
+      }
+      
+      .step-details {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.25rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 0.5rem;
+        border-left: 3px solid #21618c;
+        transition: all 0.3s ease;
+        
+        ul {
+          padding-left: 1.5rem;
+          margin-bottom: 1rem;
+          
+          li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            
+            &:before {
+              content: "";
+              position: absolute;
+              left: -1.2rem;
+              top: 0.5rem;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: #7289da;
+            }
+            
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        
+        .important-note {
+          background-color: rgba(#ffc107, 0.1);
+          padding: 0.75rem;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          border-left: 3px solid #ffc107;
+          
+          i {
+            color: #ffc107;
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+          }
+          
+          span {
+            font-size: 0.9rem;
+            color: #856404;
+          }
+        }
+        
+        .tutorial-link, .document-link {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+          
+          i {
+            color: #21618c;
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+          }
+          
+          a {
+            color: #21618c;
+            text-decoration: none;
+            font-weight: 500;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Línea de tiempo para el calendario fiscal
+.timeline-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 3rem;
+  
+  &:before {
+    content: '📅';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid lighten(#7289da, 30%);
+  }
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateX(10px);
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .timeline-date {
+      flex-basis: 130px;
+      flex-shrink: 0;
+      padding: 1rem;
+      background-color: #21618c;
+      background-image: linear-gradient(45deg, #21618c, #3498db);
+      color: white;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      
+      span {
+        font-weight: bold;
+        
+        &.date-detail {
+          font-size: 0.85rem;
+          opacity: 0.8;
+        }
+      }
+    }
+    
+    .timeline-content {
+      flex-grow: 1;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      border-left: 3px solid #7289da;
+      
+      h4 {
+        color: #21618c;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        margin-bottom: 0;
+        color: #555;
+      }
+    }
+    
+    &.active-item {
+      .timeline-content {
+        border-left-width: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        background-color: lighten(#f8f9fa, 3%);
+      }
+      
+      .timeline-date {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Sección de beneficios específicos
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      color: #21618c;
+      flex-shrink: 0;
+    }
+    
+    .benefit-text {
+      flex: 1;
+    }
+  }
+}
+
+// Sección de caso práctico
+.case-study-section {
+  .card-header {
+    background-color: #21618c;
+    
+    h4 {
+      font-size: 1.25rem;
+      color: white;
+    }
+  }
+  
+  .case-details {
+    p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .comparison-table {
+      background-color: rgba(#f8f9fa, 0.7);
+      border-radius: 8px;
+      padding: 1rem;
+      
+      .row {
+        padding: 5px 0;
+        border-bottom: 1px solid #e9ecef;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        &.bg-light {
+          background-color: rgba(#e9ecef, 0.5) !important;
+          border-radius: 4px;
+        }
+      }
+    }
+    
+    .advantages {
+      ul {
+        padding-left: 1.5rem;
+        
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Sección de herramientas
+.tools-section {
+  .card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    
+    &:hover {
+      border-color: #21618c;
+    }
+    
+    .tool-icon {
+      font-size: 3rem;
+      color: #21618c;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-outline-primary {
+      color: #21618c;
+      border-color: #21618c;
+      
+      &:hover {
+        background-color: #21618c;
+        color: white;
+      }
+    }
+  }
+}
+
+// Extra-note
+.extra-note {
+  background-color: rgba(#ffc107, 0.1);
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 4px;
+  
+  strong {
+    color: #856404;
+  }
+}
+
+// Página de beneficios
+.page-hoja4 {
+  background-color: #f9f9f9;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      color: #21618c;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: #7289da;
+      }
+    }
+    
+    .section-description {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+  }
+  
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    
+    .card-header {
+      padding: 1rem 1.5rem;
+      border-bottom: none;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+  
+  .grid-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    h3 {
+      color: #21618c;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    
+    p {
+      color: #666;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  }
+  
+  .info-banner {
+    background-color: rgba(#7289da, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    
+    i {
+      font-size: 1.5rem;
+      color: #7289da;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    p {
+      margin-bottom: 0;
+      color: #555;
+    }
+    
+    a {
+      color: #21618c;
+      font-weight: 500;
+      text-decoration: underline;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: none;
+    transition: all 0.3s ease;
+    
+    &.btn-primary {
+      background-color: #21618c;
+      border-color: #21618c;
+      
+      &:hover {
+        background-color: darken(#21618c, 10%);
+        border-color: darken(#21618c, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    &.btn-secondary {
+      background-color: #7289da;
+      border-color: #7289da;
+      
+      &:hover {
+        background-color: darken(#7289da, 10%);
+        border-color: darken(#7289da, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
+  .hero-buttons {
+    .btn {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+// Media queries
+@media (min-width: 768px) {
+  .process-steps {
+    .step {
+      .step-content {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+  
+  .timeline {
+    .timeline-item {
+      .timeline-date {
+        flex-basis: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .timeline {
+    .timeline-item {
+      flex-direction: column;
+      
+      .timeline-date {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    }
+  }
+  
+  .process-steps {
+    .step {
+      flex-direction: column;
+      
+      &:not(:last-child):before {
+        display: none;
+      }
+    }
+  }
+}

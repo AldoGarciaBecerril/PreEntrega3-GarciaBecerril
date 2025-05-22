@@ -9,13 +9,16 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: $font-family-base;
   background-color: $bg-primary;
   color: $text-color;
   line-height: 1.6;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 70px; // Para el footer
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
 }
 
 img {

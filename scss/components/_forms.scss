@@ -1,28 +1,50 @@
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
+.form-group {
+  margin-bottom: 1.5rem;
   
-  input, textarea, select {
-    padding: 12px;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: $text-color;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba($text-color, 0.2);
     border-radius: $border-radius-sm;
-    border: 1px solid #ddd;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     
     &:focus {
-      outline: none;
       border-color: $accent-color;
-      box-shadow: 0 0 0 2px rgba($accent-color, 0.2);
+      box-shadow: 0 0 0 3px rgba($accent-color, 0.1);
+      outline: none;
     }
   }
   
-  label {
-    font-weight: 500;
+  textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.contact-form {
+  margin-top: 30px;
+  
+  .form-check {
+    margin-top: 15px;
+    
+    .form-check-input {
+      &:checked {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
   }
   
-  button {
-    align-self: flex-start;
+  button[type="submit"] {
+    padding: 12px 28px;
+    font-weight: 600;
+    margin-top: 1rem;
   }
 }

@@ -1,6 +1,6 @@
 // Mixins para reutilizar código
 
-// Flexbox centering
+// Flexbox centrado
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
   padding: $card-padding;
   box-shadow: $shadow-md;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 // Hover para tarjetas
@@ -34,7 +34,10 @@
 
 // Sección contenedor estándar
 @mixin section-container {
-  padding: $section-padding $spacing-standard;
+  padding: $section-padding 0;
+  margin: 0 auto;
+  width: $container-width;
+  max-width: $container-max-width;
 }
 
 // Grid responsivo
@@ -64,6 +67,23 @@
   }
 }
 
+// Botón estándar
+@mixin button-style($bg-color, $text-color) {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-sm;
+  }
+}
+
 // Media queries
 @mixin media-breakpoint-up($breakpoint) {
   @if $breakpoint == sm {
@@ -74,5 +94,41 @@
     @media (min-width: $breakpoint-lg) { @content; }
   } @else if $breakpoint == xl {
     @media (min-width: $breakpoint-xl) { @content; }
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: #{$breakpoint-sm - 1px}) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$breakpoint-md - 1px}) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$breakpoint-lg - 1px}) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: #{$breakpoint-xl - 1px}) { @content; }
+  }
+}
+
+// Mixin para efectos en enlaces de navegación
+@mixin nav-link-effects {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: $header-decoration-size;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+    border-radius: $header-border-radius;
+  }
+  
+  &:hover::after, &.active::after {
+    width: 70%;
+    opacity: 1;
   }
 }
