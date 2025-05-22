@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <title>Requisitos - RESICO México</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="page-hoja3">
   <header>
     <div class="navbar">
       <h1 class="logo">RESICO</h1>
@@ -22,43 +23,594 @@
       </nav>
     </div>
   </header>
+  <main>
+    <div class="container my-5">
+      <div class="section-header">
+        <h2>Requisitos para tributar en RESICO</h2>
+        <p>Conoce las condiciones y requerimientos específicos para incorporarte y mantenerte en el Régimen Simplificado de Confianza</p>
+      </div>
 
-  <main class="section">
-    <div class="container">
-      <h2>Requisitos para tributar en RESICO</h2>
-      <p>Para poder inscribirte o permanecer en el Régimen Simplificado de Confianza, debes cumplir con los siguientes requisitos según tu tipo de contribuyente:</p>
+      <div class="info-banner">
+        <i class="bi bi-info-circle-fill"></i>
+        <p>Al considerar incorporarte a RESICO, es importante verificar que cumples con todos los requisitos, ya que no todos los contribuyentes son elegibles para este régimen.</p>
+      </div>      <!-- Bootstrap Tabs -->
+      <ul class="nav nav-tabs" id="contribuyentesTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="personas-fisicas-tab" data-bs-toggle="tab" data-bs-target="#personas-fisicas" type="button" role="tab" aria-controls="personas-fisicas" aria-selected="true">
+            <i class="bi bi-person-fill"></i> Personas Físicas
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="personas-morales-tab" data-bs-toggle="tab" data-bs-target="#personas-morales" type="button" role="tab" aria-controls="personas-morales" aria-selected="false">
+            <i class="bi bi-building"></i> Personas Morales
+          </button>
+        </li>
+      </ul>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Personas físicas</h3>
-          <ul>
-            <li>Ingresos anuales menores a $3.5 millones de pesos.</li>
-            <li>Realizar actividades económicas empresariales, profesionales o arrendamiento.</li>
-            <li>No ser socio ni accionista de otras personas morales.</li>
-            <li>Estar al corriente con el SAT.</li>
-          </ul>
+      <div class="tab-content" id="contribuyentesTabsContent">
+        <div class="tab-pane fade show active" id="personas-fisicas" role="tabpanel" aria-labelledby="personas-fisicas-tab">
+          <div class="card highlight-card">
+            <div class="card-icon">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <h3>Requisitos para Personas Físicas</h3>
+            <div class="requirements-list">
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-cash-coin"></i></span>
+              <div class="requirement-content">
+                <h4>Límite de ingresos</h4>
+                <p>No exceder $3.5 millones de pesos anuales en el ejercicio inmediato anterior. Si durante el año en curso superas este límite, podrás mantenerte en el régimen hasta finalizar el ejercicio.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-briefcase"></i></span>
+              <div class="requirement-content">
+                <h4>Actividades permitidas</h4>
+                <p>Realizar actividades empresariales (comercio, industria), profesionales (servicios independientes) o arrendamiento de inmuebles. Las actividades primarias (agricultura, ganadería) también son elegibles.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-x-circle"></i></span>
+              <div class="requirement-content">
+                <h4>Restricciones</h4>
+                <p>No ser socio, accionista o integrante de personas morales. Tampoco pueden aplicar quienes realicen actividades a través de fideicomisos o sean residentes en el extranjero con establecimiento permanente en México.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-check-circle"></i></span>
+              <div class="requirement-content">
+                <h4>Situación fiscal</h4>
+                <p>Estar al corriente en obligaciones fiscales con el SAT. No tener adeudos fiscales pendientes ni estar sujeto a facultades de comprobación por parte de la autoridad fiscal.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-receipt"></i></span>
+              <div class="requirement-content">
+                <h4>Facturación</h4>
+                <p>Emitir comprobantes fiscales digitales (CFDI) por todos los ingresos percibidos. Es obligatorio tener tu e.firma vigente y contar con un método de pago registrado en el portal del SAT.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-bank"></i></span>
+              <div class="requirement-content">
+                <h4>Medios de pago</h4>
+                <p>Recibir pagos a través del sistema financiero cuando excedan los montos establecidos por el SAT (actualmente, operaciones mayores a $2,000 pesos). Esto facilita la trazabilidad y transparencia fiscal.</p>
+              </div>
+            </div>
+          </div>
+        </div>      </div>
+
+      <div class="tab-pane fade" id="personas-morales" role="tabpanel" aria-labelledby="personas-morales-tab">
+        <div class="card highlight-card">
+          <div class="card-icon">
+            <i class="bi bi-building"></i>
+          </div>
+          <h3>Requisitos para Personas Morales</h3>
+          <div class="requirements-list">
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-cash-coin"></i></span>
+              <div class="requirement-content">
+                <h4>Límite de ingresos</h4>
+                <p>No exceder $35 millones de pesos anuales en el ejercicio inmediato anterior. Este límite se calcula considerando todos los ingresos acumulables de la empresa, incluyendo operaciones nacionales e internacionales.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-people"></i></span>
+              <div class="requirement-content">
+                <h4>Composición</h4>
+                <p>Estar constituidas exclusivamente por personas físicas. Las sociedades con participación de otras personas morales o extranjeras no pueden acceder a este régimen, independientemente del porcentaje de participación.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-x-circle"></i></span>
+              <div class="requirement-content">
+                <h4>Restricción de giro</h4>
+                <p>No ser entidades financieras, aseguradoras, SOFOMES, o formar parte del sistema financiero. Tampoco aplican empresas que tributen conforme a regímenes especiales como el agrícola o coordinados.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-file-earmark-text"></i></span>
+              <div class="requirement-content">
+                <h4>Documentación</h4>
+                <p>Emitir comprobantes fiscales digitales por todas las operaciones. Mantener registros contables digitales que cumplan con los requisitos del Código Fiscal de la Federación y los reglamentos aplicables.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-check-circle"></i></span>
+              <div class="requirement-content">
+                <h4>Situación fiscal</h4>
+                <p>No tener adeudos fiscales ni estar en procesos de suspensión o cancelación de actividades. La empresa debe estar registrada y activa en el RFC y tener su e.firma corporativa vigente.</p>
+              </div>
+            </div>
+            <div class="requirement-item">
+              <span class="requirement-icon"><i class="bi bi-list-columns"></i></span>
+              <div class="requirement-content">
+                <h4>Transparencia</h4>
+                <p>Mantener actualizada la información fiscal y registro de socios en el padrón del SAT. Cumplir con la obligación de presentar la declaración informativa sobre su situación fiscal cuando corresponda.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+        <h3 class="mt-5 mb-4 text-center">Proceso de inscripción al RESICO</h3>
+      
+      <div class="process-container">
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-content">
+              <h4>Verificación de elegibilidad</h4>
+              <p>Confirma que cumples con todos los requisitos para el tipo de contribuyente (persona física o moral). Puedes utilizar la herramienta de "Simulador de régimen fiscal" disponible en el portal del SAT.</p>
+              <div class="step-details">
+                <ul>
+                  <li>Revisa tus ingresos del ejercicio anterior para confirmar que no exceden los límites establecidos.</li>
+                  <li>Asegúrate de no tener impedimentos legales para tributar en este régimen.</li>
+                  <li>Verifica que tus actividades económicas son compatibles con RESICO.</li>
+                  <li>Considera que si tienes ingresos por salarios, estos no se incluyen en el límite de ingresos para RESICO.</li>
+                  <li>Comprueba que tu situación fiscal esté al corriente con el SAT (sin adeudos o créditos fiscales).</li>
+                </ul>
+                <div class="important-note">
+                  <i class="bi bi-exclamation-triangle"></i>
+                  <span>Para una evaluación más precisa, puedes agendar una cita con un asesor del SAT a través del portal oficial o llamando al Centro de Atención Telefónica.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-content">
+              <h4>Preparación de documentos</h4>
+              <p>Reúne la documentación necesaria para realizar el trámite de inscripción o cambio de régimen fiscal.</p>
+              <div class="step-details">
+                <ul>
+                  <li>e.firma vigente (antes FIEL) o contraseña SAT para acceder al portal.</li>
+                  <li>Identificación oficial vigente (credencial para votar, pasaporte, cédula profesional).</li>
+                  <li>Comprobante de domicilio fiscal no mayor a 3 meses.</li>
+                  <li>Si eres persona moral, acta constitutiva y documentación que acredite la representación legal.</li>
+                  <li>Estado de cuenta bancario a tu nombre con CLABE interbancaria (para facilitar futuras devoluciones).</li>
+                </ul>
+                <div class="tutorial-link">
+                  <i class="bi bi-file-earmark-text"></i> 
+                  <a href="https://www.sat.gob.mx/tramites/33804/obten-tu-e.firma-(antes-firma-electronica)" target="_blank">Ver requisitos para obtener e.firma</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-content">
+              <h4>Presentación de aviso</h4>
+              <p>Accede al portal del SAT con tu e.firma o contraseña y presenta el aviso de actualización de actividades económicas y obligaciones.</p>
+              <div class="step-details">
+                <ul>
+                  <li>Ingresa al portal del SAT (www.sat.gob.mx) con tus credenciales.</li>
+                  <li>Localiza la sección "Trámites del RFC" y selecciona "Actualización en el RFC".</li>
+                  <li>Selecciona la opción "Actualización de Actividades Económicas y Obligaciones".</li>
+                  <li>Sigue las instrucciones del asistente de inscripción y completa todos los campos requeridos.</li>
+                  <li>El sistema te permitirá elegir entre distintos regímenes fiscales según tu perfil tributario.</li>
+                </ul>
+                <div class="tutorial-link">
+                  <i class="bi bi-play-circle"></i> 
+                  <a href="https://www.youtube.com/watch?v=example" target="_blank">Ver tutorial en video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-content">
+              <h4>Actualización de régimen</h4>
+              <p>Selecciona "Régimen Simplificado de Confianza" como tu nuevo régimen fiscal en el formulario de actualización del SAT.</p>
+              <div class="step-details">
+                <ul>
+                  <li>En la sección de regímenes fiscales, marca "Régimen Simplificado de Confianza".</li>
+                  <li>Si eres persona física, deberás indicar el tipo de actividad que realizas.</li>
+                  <li>Para personas morales, confirma que tu empresa está constituida exclusivamente por personas físicas.</li>
+                  <li>Verifica que las obligaciones fiscales que el sistema te asigna sean correctas.</li>
+                  <li>De ser necesario, actualiza tus datos bancarios para facilitar la recepción de devoluciones.</li>
+                </ul>
+                <div class="important-note">
+                  <i class="bi bi-exclamation-triangle"></i>
+                  <span>La actualización de régimen puede realizarse en cualquier momento del año, pero para obtener todos los beneficios desde el inicio del ejercicio fiscal, se recomienda hacerlo antes del 31 de enero.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-content">
+              <h4>Confirmación y verificación</h4>
+              <p>Recibe la confirmación del SAT y comienza a tributar bajo el nuevo régimen a partir del periodo establecido.</p>
+              <div class="step-details">
+                <ul>
+                  <li>Guarda o imprime tu acuse de actualización como comprobante del trámite.</li>
+                  <li>Después de 24-48 horas, verifica en tu Constancia de Situación Fiscal que el cambio de régimen se haya aplicado correctamente.</li>
+                  <li>Actualiza tus datos fiscales con tus clientes y proveedores.</li>
+                  <li>Configura tu software contable o fiscal para cumplir con las nuevas obligaciones del RESICO.</li>
+                  <li>Descarga tu cédula de identificación fiscal actualizada desde el portal del SAT.</li>
+                </ul>
+                <div class="document-link">
+                  <i class="bi bi-file-earmark-pdf"></i> 
+                  <a href="#" target="_blank">Descargar guía completa de inscripción</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="card">
-          <h3>Personas morales</h3>
-          <ul>
-            <li>Ingresos anuales menores a $35 millones de pesos.</li>
-            <li>Estar constituidas solo por personas físicas.</li>
-            <li>No ser una institución financiera.</li>
-            <li>Emitir facturas electrónicas por todos los ingresos.</li>
-          </ul>
+      <div class="info-banner mt-4">
+        <i class="bi bi-info-circle-fill"></i>
+        <p>Recuerda que el proceso de inscripción al RESICO se puede realizar totalmente en línea, sin necesidad de acudir a oficinas del SAT. En caso de presentar problemas durante el proceso, puedes solicitar asesoría especializada a través del portal del SAT o mediante el Centro de Atención Telefónica (MarcaSAT): 55-627-22-728.</p>
+      </div>      <div class="timeline-section mt-5">
+        <h3 class="text-center mb-4">Calendario de cumplimiento fiscal en RESICO</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span>Mensual</span>
+              <span class="date-detail">Día 17</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Declaración provisional de impuestos</h4>
+              <p>Presenta tu declaración mensual de ISR a más tardar el día 17 del mes siguiente al que corresponda el pago. El SAT precalcula los impuestos con base en tus ingresos facturados, lo que simplifica el cumplimiento.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span>Mensual</span>
+              <span class="date-detail">Día 17</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Declaración de IVA</h4>
+              <p>Si estás obligado al pago de IVA, presenta la declaración mensual los días 17 de los meses impares (enero, marzo, mayo, etc.). En RESICO debes presentar la declaración de IVA por separado, pues el precálculo del SAT no incluye este impuesto.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span>Trimestral</span>
+              <span class="date-detail">Varía</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Declaración informativa de operaciones con terceros (DIOT)</h4>
+              <p>Si realizas actividades gravadas con IVA, debes presentar la DIOT de manera trimestral. El plazo depende del RFC: 01-10 día 16, 11-20 día 17, 21-31 día 18 del mes siguiente al trimestre que reportas.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span>Anual</span>
+              <span class="date-detail">Abril</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Declaración anual de impuestos</h4>
+              <p>Personas físicas: Presenta tu declaración anual durante abril del año siguiente.<br>
+              Personas morales: Presenta tu declaración anual a más tardar el 31 de marzo del año siguiente.<br>
+              El sistema del SAT precalcula tu declaración anual con base en los ingresos facturados y pagos provisionales realizados durante el año.</p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="extra-note">
-        <p><strong>Importante:</strong> En ambos casos, es indispensable estar dado de alta en el SAT y no contar con adeudos fiscales.</p>
+        <strong>Importante:</strong> Si superas los límites de ingresos establecidos, deberás salir del RESICO en el ejercicio siguiente. Es tu responsabilidad monitorear tus ingresos y reportar cualquier cambio en tu situación fiscal. Además, mantén actualizados tus medios de contacto en el Buzón Tributario para recibir notificaciones importantes del SAT.
+      </div>
+        <div class="requirements-faq mt-5">
+        <h3 class="text-center mb-4">Preguntas frecuentes sobre requisitos</h3>
+        <div class="accordion" id="requerimentsFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question1">
+                ¿Puedo cambiarme a RESICO si actualmente tributo en otro régimen?
+              </button>
+            </h2>
+            <div id="question1" class="accordion-collapse collapse show" data-bs-parent="#requerimentsFAQ">
+              <div class="accordion-body">
+                Sí, puedes cambiar de régimen fiscal al RESICO en cualquier momento del año, siempre que cumplas con los requisitos establecidos. El cambio se efectuará a partir del mes siguiente a la presentación del aviso. Sin embargo, para aprovechar los beneficios desde el inicio del año fiscal, se recomienda realizar el cambio antes del 31 de enero. Ten en cuenta que una vez que ingresas al RESICO, no podrás cambiarte a otro régimen fiscal durante el mismo ejercicio.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question2">
+                ¿Qué sucede si excedo el límite de ingresos durante el año?
+              </button>
+            </h2>
+            <div id="question2" class="accordion-collapse collapse" data-bs-parent="#requerimentsFAQ">
+              <div class="accordion-body">
+                Si durante el ejercicio fiscal superas el límite de ingresos establecido ($3.5 millones para personas físicas o $35 millones para personas morales), podrás mantener el régimen hasta finalizar el año en curso. Sin embargo, a partir del año siguiente, deberás tributar en el régimen general que te corresponda. El SAT identificará automáticamente esta situación y te asignará las nuevas obligaciones fiscales. Considera que para el cálculo de este límite se toman en cuenta todos los ingresos por actividades empresariales, profesionales y por arrendamiento, excepto sueldos y salarios, los cuales tributan de forma separada.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question3">
+                ¿Los asalariados pueden inscribirse en RESICO?
+              </button>
+            </h2>
+            <div id="question3" class="accordion-collapse collapse" data-bs-parent="#requerimentsFAQ">
+              <div class="accordion-body">
+                Las personas físicas con ingresos por salarios no pueden tributar exclusivamente en el RESICO. Sin embargo, si además de tu salario realizas actividades empresariales, profesionales o de arrendamiento, puedes tributar en el RESICO por estos ingresos adicionales, siempre que no superen el límite establecido de $3.5 millones de pesos anuales. Tendrás que presentar declaraciones independientes por cada tipo de ingreso. Es importante señalar que los ingresos por salarios no se acumulan para determinar si excedes el límite de RESICO, pero tributarán conforme al régimen de sueldos y salarios.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question4">
+                ¿Puedo aplicar deducciones personales en RESICO?
+              </button>
+            </h2>
+            <div id="question4" class="accordion-collapse collapse" data-bs-parent="#requerimentsFAQ">
+              <div class="accordion-body">
+                Sí, las personas físicas que tributan en RESICO pueden aplicar deducciones personales en su declaración anual, tales como gastos médicos, dentales, funerarios, intereses hipotecarios, donativos, aportaciones a fondos de retiro, etc. Estas deducciones personales no afectan la tasa efectiva que se aplica a los ingresos empresariales, ya que se restan después de determinar el impuesto. Es importante conservar los comprobantes fiscales que amparen estas deducciones y verificar que cumplan con todos los requisitos establecidos por el SAT.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question5">
+                ¿Es obligatorio emitir facturas electrónicas (CFDI) en RESICO?
+              </button>
+            </h2>
+            <div id="question5" class="accordion-collapse collapse" data-bs-parent="#requerimentsFAQ">
+              <div class="accordion-body">
+                Sí, la emisión de facturas electrónicas (CFDI) es obligatoria para todos los contribuyentes del RESICO, sin importar el monto de la operación. Debes expedir CFDI por todas tus ventas o servicios. Además, es necesario incluir en los CFDI la forma de pago correspondiente. A partir de 2023, estos comprobantes deben cumplir con la versión 4.0, que incluye nuevos campos obligatorios como el régimen fiscal del receptor. El SAT utiliza la información de estos CFDI para precalcular tus obligaciones fiscales, por lo que es fundamental emitirlos correctamente y de manera oportuna.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
+      <!-- Tabla de tasas de impuestos -->
+      <div class="tax-rates-section">
+        <h3 class="text-center mb-4">Tasas de ISR aplicables en RESICO</h3>
+        
+        <ul class="nav nav-tabs" id="taxRatesTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="personas-fisicas-rate-tab" data-bs-toggle="tab" data-bs-target="#personas-fisicas-rate" type="button" role="tab" aria-controls="personas-fisicas-rate" aria-selected="true">
+              <i class="bi bi-person-fill"></i> Personas Físicas
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="personas-morales-rate-tab" data-bs-toggle="tab" data-bs-target="#personas-morales-rate" type="button" role="tab" aria-controls="personas-morales-rate" aria-selected="false">
+              <i class="bi bi-building"></i> Personas Morales
+            </button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="taxRatesTabsContent">
+          <div class="tab-pane fade show active" id="personas-fisicas-rate" role="tabpanel" aria-labelledby="personas-fisicas-rate-tab">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Ingresos anuales (MXN)</th>
+                    <th>Tasa de ISR aplicable</th>
+                    <th>Comparativa con Régimen General</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hasta $25,000</td>
+                    <td>1.00%</td>
+                    <td>Considerable ahorro frente al 1.92% mínimo del régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$25,000.01 a $50,000</td>
+                    <td>1.10%</td>
+                    <td>Ahorro de aproximadamente 30% frente al régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$50,000.01 a $83,333.33</td>
+                    <td>1.50%</td>
+                    <td>Simplificación en el cálculo y ahorro aproximado del 25%</td>
+                  </tr>
+                  <tr>
+                    <td>$83,333.34 a $208,333.33</td>
+                    <td>2.00%</td>
+                    <td>Simplificación en el cálculo y ahorro aproximado del 20%</td>
+                  </tr>
+                  <tr>
+                    <td>$208,333.34 a $625,000</td>
+                    <td>2.50%</td>
+                    <td>Ahorro frente a tasas de hasta 17.92% en régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$625,000.01 a $1,000,000</td>
+                    <td>3.00%</td>
+                    <td>Ahorro significativo frente a tasas de hasta 21.36% en régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$1,000,000.01 a $1,500,000</td>
+                    <td>3.50%</td>
+                    <td>Simplificación fiscal y tasas menores a las progresivas del régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$1,500,000.01 a $2,000,000</td>
+                    <td>3.75%</td>
+                    <td>Tasas considerablemente menores a las del régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$2,000,000.01 a $2,500,000</td>
+                    <td>4.00%</td>
+                    <td>Tasa simplificada que elimina cálculos complejos del régimen general</td>
+                  </tr>
+                  <tr>
+                    <td>$2,500,000.01 a $3,500,000</td>
+                    <td>4.50%</td>
+                    <td>Tasa máxima en RESICO, menor al 35% máximo del régimen general</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="info-banner mt-3">
+              <i class="bi bi-info-circle-fill"></i>
+              <p>Las tasas efectivas en RESICO se aplican sobre los ingresos totales del contribuyente, sin considerar deducciones estructurales. Esto simplifica el cumplimiento y reduce significativamente la carga fiscal para personas físicas con ingresos moderados.</p>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" id="personas-morales-rate" role="tabpanel" aria-labelledby="personas-morales-rate-tab">
+            <div class="alert alert-primary">
+              <i class="bi bi-lightbulb"></i>
+              <strong>Tasa única simplificada:</strong> Las personas morales que tributen en el RESICO aplicarán una tasa fija del 30% sobre su utilidad fiscal, en lugar del mismo 30% del régimen general, pero con importantes simplificaciones administrativas y beneficios adicionales.
+            </div>
+            
+            <div class="key-benefits mt-4">
+              <h4>Principales ventajas fiscales:</h4>
+              <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <div>
+                    <strong>Deducción inmediata de inversiones:</strong> Posibilidad de deducir el 100% del valor de las inversiones en activos fijos nuevos, en el mismo ejercicio en que se adquieren, hasta por un monto de $3 millones de pesos.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <div>
+                    <strong>Simplificación contable:</strong> Obligaciones contables y de presentación de información reducidas respecto al régimen general.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <div>
+                    <strong>Sin pagos provisionales mensuales:</strong> Se realizan pagos provisionales simplificados, lo que mejora el flujo de efectivo.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <div>
+                    <strong>Facilidades para el cumplimiento:</strong> Herramientas digitales que facilitan el cálculo y presentación de declaraciones.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="alert alert-warning mt-4">
+              <i class="bi bi-exclamation-triangle"></i>
+              <strong>Importante:</strong> Si la persona moral rebasa el límite de $35 millones de ingresos, deberá abandonar este régimen al año siguiente y tributar en el régimen general de ley.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-container">
+        <a href="hoja4.html" class="btn btn-primary btn-lg">
+          <i class="bi bi-star-fill me-2"></i>Conocer los beneficios
+        </a>
+        <a href="hoja5.html" class="btn btn-secondary btn-lg">
+          <i class="bi bi-chat-dots-fill me-2"></i>Consultar con un asesor
+        </a>
       </div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 RESICO México. Todos los derechos reservados.</p>
-  </footer>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Los tabs de Bootstrap 5 son manejados automáticamente por bootstrap.bundle.min.js
+      
+      // Mostrar detalles de los pasos al hacer clic en el título
+      const steps = document.querySelectorAll('.step');
+      
+      steps.forEach(step => {
+        const details = step.querySelector('.step-details');
+        const heading = step.querySelector('h4');
+        
+        if (details && heading) {
+          // Inicialmente ocultos
+          details.style.display = 'none';
+          heading.style.cursor = 'pointer';
+          
+          // Añadir indicador visual de expandible si no existe
+          if (!heading.querySelector('i')) {
+            heading.innerHTML += ' <i class="bi bi-chevron-down"></i>';
+          }
+          
+          heading.addEventListener('click', function() {
+            // Toggle para mostrar/ocultar con animación
+            const isVisible = details.style.display !== 'none';
+            
+            if (isVisible) {
+              details.style.transition = 'opacity 0.3s ease, max-height 0.5s ease';
+              details.style.opacity = '0';
+              details.style.maxHeight = '0';
+              
+              setTimeout(() => {
+                details.style.display = 'none';
+              }, 300);
+            } else {
+              details.style.display = 'block';
+              details.style.maxHeight = '0';
+              details.style.opacity = '0';
+              
+              setTimeout(() => {
+                details.style.transition = 'opacity 0.3s ease, max-height 0.5s ease';
+                details.style.opacity = '1';
+                details.style.maxHeight = '1000px';
+              }, 10);
+            }
+            
+            // Cambiar dirección del ícono
+            const icon = this.querySelector('i');
+            if (icon) {
+              icon.classList.toggle('bi-chevron-down');
+              icon.classList.toggle('bi-chevron-up');
+            }
+          });
+        }
+      });
+      
+      // Añadir efecto hover a los elementos de requisitos
+      const requirementItems = document.querySelectorAll('.requirement-item');
+      requirementItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateX(5px)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateX(0)';
+        });
+      });
+      
+      // Añadir efecto de resaltado al hacer clic en los elementos del timeline
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      timelineItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Eliminar la clase activa de todos los elementos
+          timelineItems.forEach(i => i.classList.remove('active-item'));
+          
+          // Añadir la clase activa al elemento clicado
+          this.classList.add('active-item');
+          this.style.transform = 'translateX(10px)';
+          
+          // Restablecer después de un tiempo
+          setTimeout(() => {
+            this.style.transform = 'translateX(0)';
+          }, 500);
+        });
+      });
+    });
+  </script>
 </body>
 </html>

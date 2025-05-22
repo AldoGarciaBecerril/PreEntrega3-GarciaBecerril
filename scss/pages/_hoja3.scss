@@ -1,0 +1,625 @@
+// Estilos específicos para la página "Requisitos"
+
+.page-hoja3 {
+  background-color: $bg-primary;
+  
+  .section-header {
+    @include section-header;
+    margin-top: 2rem;
+  }
+  
+  // Bootstrap Tabs personalizados
+  .nav-tabs {
+    border-bottom: 2px solid lighten($primary-color, 40%);
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    
+    .nav-item {
+      margin-bottom: -2px;
+    }
+    
+    .nav-link {
+      border: none;
+      background-color: transparent;
+      color: $text-tertiary;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: $border-radius $border-radius 0 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      
+      i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+      
+      &:hover:not(.active) {
+        background-color: lighten($accent-color, 35%);
+        color: $primary-color;
+      }
+      
+      &.active {
+        background-color: $primary-color;
+        color: white;
+        border-bottom: 3px solid $accent-color;
+      }
+    }
+  }
+  
+  .tab-content {
+    > .tab-pane {
+      display: none;
+      
+      &.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+  
+  // Estilos de tarjetas
+  .card {
+    @include card-base;
+    @include card-hover;
+    border-top: 4px solid $accent-color;
+    
+    h3 {
+      color: $secondary-color;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid lighten($accent-color, 30%);
+      text-align: center;
+    }
+    
+    &.highlight-card {
+      border-top-color: $primary-color;
+      background-color: $bg-tertiary;
+    }
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    color: $accent-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+    .highlight-card & {
+      color: $primary-color;
+    }
+  }
+  
+  // Lista de requisitos con iconos
+  .requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .requirement-item {
+      display: flex;
+      align-items: flex-start;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: translateX(5px);
+      }
+      
+      .requirement-icon {
+        flex-shrink: 0;
+        width: 45px;
+        height: 45px;
+        background-color: rgba($accent-color, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        color: $primary-color;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: $primary-color;
+          color: white;
+          transform: scale(1.1);
+        }
+      }
+      
+      .requirement-content {
+        flex-grow: 1;
+        
+        h4 {
+          margin-bottom: 0.5rem;
+          color: $secondary-color;
+          font-weight: 600;
+        }
+        
+        p {
+          margin-bottom: 0;
+          color: $text-tertiary;
+        }
+      }
+    }
+  }
+  
+  // Proceso de inscripción mejorado
+  .process-container {
+    background-color: $bg-tertiary;
+    border-radius: $border-radius;
+    padding: 2rem;
+    box-shadow: $shadow-sm;
+    margin: 2rem 0;
+    background-image: linear-gradient(120deg, rgba($bg-tertiary, 0.9) 0%, rgba(white, 0.9) 100%);
+    position: relative;
+    overflow: hidden;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: rgba($accent-color, 0.05);
+      z-index: 0;
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: rgba($primary-color, 0.05);
+      z-index: 0;
+    }
+  }
+  
+  .process-steps {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    
+    .step {
+      display: flex;
+      margin-bottom: 2.5rem;
+      position: relative;
+      background-color: rgba(white, 0.7);
+      border-radius: $border-radius;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-md;
+        background-color: white;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 25px;
+        height: calc(100% + 1.5rem);
+        width: 2px;
+        background-color: lighten($primary-color, 30%);
+        z-index: 0;
+      }
+      
+      .step-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        margin-right: 1.5rem;
+        position: relative;
+        z-index: 1;
+        box-shadow: $shadow-sm;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.1) rotate(10deg);
+        }
+      }
+      
+      .step-content {
+        flex-grow: 1;
+        
+        h4 {
+          color: $primary-color;
+          margin-bottom: 0.75rem;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          
+          i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+            
+            &.bi-chevron-up {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        
+        p {
+          margin-bottom: 1rem;
+          color: $text-color;
+        }
+        
+        .step-details {
+          background-color: white;
+          border-radius: $border-radius;
+          padding: 1.25rem;
+          box-shadow: $shadow-sm;
+          margin-top: 0.5rem;
+          border-left: 3px solid $primary-color;
+          transition: all 0.3s ease;
+          
+          ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            
+            li {
+              margin-bottom: 0.5rem;
+              position: relative;
+              
+              &:before {
+                content: "";
+                position: absolute;
+                left: -1.2rem;
+                top: 0.5rem;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $accent-color;
+              }
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          
+          .important-note {
+            background-color: rgba($border-warning, 0.1);
+            padding: 0.75rem;
+            border-radius: $border-radius-sm;
+            display: flex;
+            align-items: center;
+            border-left: 3px solid $border-warning;
+            
+            i {
+              color: $border-warning;
+              font-size: 1.25rem;
+              margin-right: 0.75rem;
+            }
+            
+            span {
+              font-size: 0.9rem;
+              color: $color-warning;
+            }
+          }
+          
+          .tutorial-link, .document-link {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            
+            i {
+              color: $primary-color;
+              margin-right: 0.5rem;
+              font-size: 1.25rem;
+            }
+            
+            a {
+              color: $primary-color;
+              text-decoration: none;
+              font-weight: 500;
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Línea de tiempo para el calendario fiscal
+  .timeline-section {
+    background-color: white;
+    border-radius: $border-radius;
+    padding: 2rem;
+    box-shadow: $shadow-sm;
+    position: relative;
+    
+    &:before {
+      content: '📅';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 30px;
+      background-color: white;
+      border-radius: 50%;
+      padding: 5px;
+      border: 1px solid lighten($accent-color, 30%);
+    }
+  }
+  
+  .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    .timeline-item {
+      display: flex;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: translateX(10px);
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .timeline-date {
+        flex-basis: 130px;
+        flex-shrink: 0;
+        padding: 1rem;
+        background-color: $primary-color;
+        background-image: linear-gradient(45deg, $primary-color, $secondary-color);
+        color: white;
+        border-radius: $border-radius-sm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+        text-align: center;
+        box-shadow: $shadow-sm;
+        
+        span {
+          font-weight: bold;
+          
+          &.date-detail {
+            font-size: 0.85rem;
+            opacity: 0.8;
+          }
+        }
+      }
+      
+      .timeline-content {
+        flex-grow: 1;
+        padding: 1rem;
+        background-color: $bg-tertiary;
+        border-radius: $border-radius-sm;
+        border-left: 3px solid $accent-color;
+        
+        h4 {
+          color: $primary-color;
+          margin-bottom: 0.5rem;
+        }
+        
+        p {
+          margin-bottom: 0;
+          color: $text-tertiary;
+        }
+      }
+      
+      &.active-item {
+        .timeline-content {
+          border-left-width: 5px;
+          box-shadow: $shadow-md;
+          background-color: lighten($bg-tertiary, 3%);
+        }
+        
+        .timeline-date {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  // Acordeón de preguntas frecuentes
+  .requirements-faq {
+    .accordion {
+      --bs-accordion-border-color: #{lighten($accent-color, 30%)};
+      --bs-accordion-active-color: #{$primary-color};
+      --bs-accordion-active-bg: #{rgba($accent-color, 0.05)};
+      --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+      border-radius: $border-radius;
+      overflow: hidden;
+      
+      .accordion-button {
+        font-weight: 500;
+        
+        &:not(.collapsed) {
+          box-shadow: none;
+        }
+        
+        &::after {
+          transition: transform 0.3s ease;
+        }
+      }
+      
+      .accordion-body {
+        background-color: rgba($bg-tertiary, 0.5);
+        border-left: 3px solid $accent-color;
+      }
+      
+      .accordion-item {
+        border-color: lighten($accent-color, 30%);
+        
+        &:first-of-type {
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+          
+          .accordion-button {
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+          }
+        }
+        
+        &:last-of-type {
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          
+          .accordion-button.collapsed {
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+          }
+        }
+      }
+    }
+  }
+  
+  .cta-container {
+    @include flex-center;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  // Estilos para la sección de tasas de impuestos
+  .tax-rates-section {
+    background-color: white;
+    border-radius: $border-radius;
+    padding: 2rem;
+    box-shadow: $shadow-sm;
+    margin: 3rem 0;
+    
+    .table-responsive {
+      margin-top: 1.5rem;
+    }
+    
+    .table {
+      --bs-table-hover-bg: #{rgba($accent-color, 0.05)};
+      --bs-table-hover-color: #{$text-color};
+      
+      thead {
+        th {
+          font-weight: 600;
+          background-color: rgba($primary-color, 0.1);
+          color: $primary-color;
+        }
+      }
+      
+      td, th {
+        padding: 1rem 0.75rem;
+        vertical-align: middle;
+      }
+    }
+    
+    .alert {
+      display: flex;
+      align-items: center;
+      
+      i {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+    
+    .key-benefits {
+      h4 {
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+      
+      .list-group-item {
+        padding: 1rem;
+        border-color: lighten($accent-color, 30%);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: rgba($accent-color, 0.05);
+          transform: translateX(5px);
+        }
+        
+        i {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+  
+  // Media queries
+  @include media-breakpoint-up(md) {
+    .process-steps {
+      .step {
+        .step-content {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+    
+    .timeline {
+      .timeline-item {
+        .timeline-date {
+          flex-basis: 150px;
+        }
+      }
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+    .card {
+      padding: 1.75rem;
+    }
+  }
+  
+  @include media-breakpoint-down(md) {
+    .timeline {
+      .timeline-item {
+        flex-direction: column;
+        
+        .timeline-date {
+          margin-right: 0;
+          margin-bottom: 1rem;
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+    }
+    
+    .process-steps {
+      .step {
+        &:not(:last-child):after {
+          height: calc(100% + 2rem);
+        }
+      }
+    }
+    
+    .nav-tabs {
+      .nav-link {
+        padding: 0.75rem 1rem;
+      }
+    }
+  }
+}
