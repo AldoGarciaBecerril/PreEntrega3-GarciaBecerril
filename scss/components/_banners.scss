@@ -1,0 +1,30 @@
+.info-banner {
+  display: flex;
+  align-items: center;
+  background-color: $bg-info;
+  padding: 1rem 1.5rem;
+  border-radius: $border-radius;
+  margin: 2rem auto;
+  max-width: 900px;
+  
+  i {
+    font-size: 1.75rem;
+    color: $primary-color;
+    margin-right: 1rem;
+  }
+  
+  p {
+    margin: 0;
+    font-size: $font-size-lg;
+    color: $primary-color;
+  }
+}
+
+.extra-note {
+  margin-top: 30px;
+  background-color: $bg-warning;
+  color: $color-warning;
+  padding: 15px 20px;
+  border-left: 5px solid $border-warning;
+  border-radius: $border-radius-sm;
+}

@@ -1,0 +1,35 @@
+// Tarjetas básicas
+.card {
+  flex: 1 1 300px;
+  background-color: $bg-tertiary;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: $shadow-sm;
+  
+  h3 {
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+  
+  ul {
+    list-style: disc inside;
+    padding-left: 10px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+// Tarjeta grilla
+.grid-card {
+  @include card-base;
+  text-align: center;
+  
+  h3 {
+    color: $secondary-color;
+  }
+}

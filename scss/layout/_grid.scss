@@ -1,0 +1,32 @@
+.container {
+  width: $container-width;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  @include section-container;
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+}
+
+.grid-container {
+  @include section-container;
+}
+
+.grid-item {
+  display: grid;
+  
+  h2 {
+    color: $primary-color;
+  }
+}
+
+.grid-cards {
+  @include responsive-grid(300px);
+}

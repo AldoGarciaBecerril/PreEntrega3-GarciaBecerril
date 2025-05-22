@@ -1,0 +1,16 @@
+nav ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  
+  li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: darken(white, 15%);
+    }
+  }
+}

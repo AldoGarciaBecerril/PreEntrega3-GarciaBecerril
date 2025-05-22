@@ -1,0 +1,40 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: $font-size-xxxl;
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: $font-size-xl;
+  color: $secondary-color;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-accent {
+  color: $accent-color;
+}

@@ -1,0 +1,87 @@
+// Hero section
+.hero {
+  padding: 3rem 0;
+  background-color: $bg-primary;
+  overflow: hidden;
+  position: relative;
+  
+  @include section-container;
+}
+
+.hero-row {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba($accent-color, 0.15);
+  color: $accent-color;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.hero-content {
+  padding-right: 20px;
+  
+  h2 {
+    font-size: $font-size-hero;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    line-height: 1.2;
+    
+    .highlight {
+      color: $accent-color;
+      position: relative;
+      z-index: 1;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: rgba($accent-color, 0.2);
+        z-index: -1;
+      }
+    }
+  }
+  
+  .hero-description {
+    font-size: $font-size-lg;
+    margin-bottom: 2rem;
+    color: $text-tertiary;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+}
+
+.hero-image {
+  .image-container {
+    position: relative;
+    padding-top: 10px;
+    padding-right: 10px;
+    
+    img {
+      border-radius: $border-radius;
+      box-shadow: $shadow-img;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .image-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85%;
+      height: 85%;
+      background-color: $accent-color;
+      border-radius: $border-radius;
+      z-index: 1;
+    }
+  }
+}

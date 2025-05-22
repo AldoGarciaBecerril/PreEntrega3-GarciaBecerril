@@ -1,0 +1,78 @@
+// Mixins para reutilizar código
+
+// Flexbox centering
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Flexbox distribución
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Tarjeta base
+@mixin card-base {
+  background-color: $bg-secondary;
+  border-radius: $border-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-md;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Hover para tarjetas
+@mixin card-hover {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Sección contenedor estándar
+@mixin section-container {
+  padding: $section-padding $spacing-standard;
+}
+
+// Grid responsivo
+@mixin responsive-grid($min-width: 300px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  gap: $gap-standard;
+  margin-bottom: 2rem;
+}
+
+// Encabezado de sección
+@mixin section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h2 {
+    font-size: $font-size-xxxl;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: $text-tertiary;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// Media queries
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}

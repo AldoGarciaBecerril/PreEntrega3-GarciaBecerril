@@ -1,197 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Main SCSS file
+// Importamos todos los archivos parciales
 
-body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
-  line-height: 1.6;
-}
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-header {
-  background-color: #0d47a1;
-  padding: 20px 0;
-  color: white;
-}
+// Base
+@import 'base/reset';
+@import 'base/typography';
 
-.navbar {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/navigation';
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/feature_cards';
+@import 'components/banners';
+@import 'components/forms';
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 10%;
-  background-color: white;
-}
-
-.hero-content {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #0d47a1;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-.hero-buttons .btn,
-.hero-buttons .btn-secondary {
-  padding: 12px 24px;
-  margin-right: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/*  .btn {
-    background-color: #2196f3;
-    color: white;
-  }
-  
-  .btn-secondary {
-    background-color: #cfd8dc;
-    color: #0d47a1;
-  } */
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #e3f2fd;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-/* hoja 2 */
-
-.container {
-  display: inline;
-}
-
-.section {
-  padding: 60px 10%;
-  background-color: #ffffff;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0d47a1;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.card {
-  flex: 1 1 300px;
-  background-color: #f1f8ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #1565c0;
-}
-
-.card ul {
-  list-style: disc inside;
-  padding-left: 10px;
-}
-
-/* hoja4 */
-
-.grid-container {
-  padding: 60px 10%;
-  background-color: #ffffff;
-}
-
-.grid-item {
-  display: grid;
-}
-
-.grid-item h2 {
-  color: #0d47a1;
-}
-
-.grid-cards {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 1.875rem;
-  margin-top: 30px;
-}
-
-.grid-card {
-  background-color: #f1f8ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.grid-card h3 {
-  color: #1565c0;
-}
-
-/* hoja3 */
-
-.extra-note {
-  margin-top: 30px;
-  background-color: #fff3cd;
-  color: #856404;
-  padding: 15px 20px;
-  border-left: 5px solid #ffc107;
-  border-radius: 5px;
-}
-
-/* hoja5 */
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
-}
+// Pages
+@import 'pages/home';
+@import 'pages/hoja2';
+@import 'pages/hoja3';
+@import 'pages/hoja4';
+@import 'pages/hoja5';

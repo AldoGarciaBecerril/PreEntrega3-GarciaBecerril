@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-family-base;
+  background-color: $bg-primary;
+  color: $text-color;
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 70px; // Para el footer
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
